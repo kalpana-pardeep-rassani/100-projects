@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* container */
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* decorating list items */
+ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+}
+
+.list-item{
+    position: relative;
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    transition: 1s;
+}
+
+/* before */
+.list-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: #be1212; */
+    opacity: 0;
+    transform: scaleY(2);
+    transition: 1s;
+    border-top: 2px solid #be1212;
+    border-bottom: 2px solid #be1212;
+}
+
+/* after */
+.list-item:hover::before{
+    transform: scaleY(1.2);
+    opacity: 1;
+}
+
+/* list item after effect */
+.list-item:hover {
+    background: #be1212;
+    color: #fff;
+}
